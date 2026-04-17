@@ -80,3 +80,48 @@ function displayWord(data) {
 function showError(message) {
   errorBox.textContent = message;
 }
+const saveBtn = document.getElementById("saveBtn");
+const savedList = document.getElementById("savedList");
+
+let savedWords = [];
+
+// Load saved words when page loads
+window.addEventListener("load", () => {
+  const stored = localStorage.getItem("words");
+  if (stored) {
+    savedWords = JSON.parse(stored);
+    displaySavedWords();
+  }
+});
+
+// When SAVE button is clicked
+saveBtn.addEventListener("click", () => {
+  const word = document.getElementById("wordTitle").textContent;
+
+  if (!word) {
+    alert("No word to save!");
+    return;
+  }
+
+  if (!savedWords.includes(word)) {
+    savedWords.push(word);
+
+    // Save to localStorage
+    localStorage.setItem("words", JSON.stringify(savedWords));
+
+    displaySavedWords();
+  } else {
+    alert("Word already saved!");
+  }
+});
+
+// Display saved words
+function displaySavedWords() {
+  savedList.innerHTML = "";
+
+  savedWords.forEach(word => {
+    const li = document.createElement("li");
+    li.textContent = word;
+    savedList.appendChild(li);
+  });
+}
