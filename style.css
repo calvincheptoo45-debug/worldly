@@ -1,57 +1,111 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+
+/* RESET */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
 .container {
-  width: 60%;
-  margin: auto;
+  background: white;
+  padding: 30px;
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   text-align: center;
-  padding-top: 50px;
 }
 
+/* TITLE */
 h1 {
+  margin-bottom: 20px;
   color: #333;
 }
 
+/* FORM */
 form {
-  margin: 20px 0;
+  display: flex;
+  gap: 10px;
 }
 
 input {
-  padding: 10px;
-  width: 60%;
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  outline: none;
 }
 
+input:focus {
+  border-color: #4facfe;
+}
+
+/* BUTTONS */
 button {
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: none;
-  background: #2c7be5;
+  border-radius: 8px;
+  background: #4facfe;
   color: white;
-  border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #1a5dcc;
+  background: #007bff;
+  transform: scale(1.05);
 }
 
+/* RESULT BOX */
 .result {
-  background: white;
-  padding: 20px;
   margin-top: 20px;
+  text-align: left;
+  padding: 15px;
   border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* SAVE BUTTON */
+#saveBtn {
+  margin-top: 15px;
+  width: 100%;
+  background: #28a745;
+}
+
+#saveBtn:hover {
+  background: #218838;
+}
+
+/* SAVED WORDS */
+#savedSection {
+  margin-top: 20px;
   text-align: left;
 }
 
-.hidden {
-  display: none;
+#savedList li {
+  background: #e9f7ef;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
 }
 
+/* ERROR */
 .error {
   color: red;
+  margin-top: 10px;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
 }
