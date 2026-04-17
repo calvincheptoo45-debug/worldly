@@ -3,55 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wordly Dictionary SPA</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
   <div class="container">
 
-    <h1>📘 Wordly Dictionary</h1>
+    <h1>Dictionary App</h1>
 
-    <!-- Search Form -->
-    <form id="searchForm">
-      <input 
-        type="text" 
-        id="wordInput" 
-        placeholder="Search a word..." 
-        aria-label="Search word"
-      />
-      <button type="submit">Search</button>
-    </form>
+    <!-- SEARCH -->
+    <input id="searchInput" placeholder="Type a word..." />
+    <button id="searchBtn">Search</button>
 
-    <!-- Error Message -->
-    <p id="error" class="error"></p>
+    <!-- RESULT -->
+    <h2 id="wordTitle"></h2>
+    <p id="meaningBox">Search a word to see meaning</p>
 
-    <!-- Results Section -->
-    <div id="result" class="result hidden">
-      <h2 id="wordTitle"></h2>
+    <!-- SAVE -->
+    <button id="saveBtn">Save Word</button>
 
-      <p><strong>Pronunciation:</strong> <span id="phonetic"></span></p>
-
-      <audio id="audio" controls class="hidden"></audio>
-
-      <h3>Definition</h3>
-      <p id="definition"></p>
-
-      <h3>Example</h3>
-      <p id="example"></p>
-
-      <h3>Synonyms</h3>
-      <p id="synonyms"></p>
-
-      <!-- ✅ SAVE BUTTON ADDED HERE -->
-      <button id="saveBtn" type="button">💾 Save Word</button>
-    </div>
-
-    <!-- SAVED WORDS LIST -->
-    <div id="savedSection">
-      <h3>Saved Words</h3>
-      <ul id="savedList"></ul>
-    </div>
+    <!-- SAVED -->
+    <h3>Saved Words</h3>
+    <ul id="savedList"></ul>
 
   </div>
 

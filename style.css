@@ -1,111 +1,64 @@
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  min-height: 100vh;
+  background: #f4f6f8;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 40px;
 }
 
-/* CONTAINER */
 .container {
+  width: 360px;
   background: white;
-  padding: 30px;
-  width: 500px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
   text-align: center;
 }
 
-/* TITLE */
-h1 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* FORM */
-form {
-  display: flex;
-  gap: 10px;
-}
-
 input {
-  flex: 1;
-  padding: 12px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  outline: none;
 }
 
-input:focus {
-  border-color: #4facfe;
-}
-
-/* BUTTONS */
 button {
-  padding: 12px 15px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
   border: none;
   border-radius: 8px;
-  background: #4facfe;
-  color: white;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
-  background: #007bff;
-  transform: scale(1.05);
+  background: #0056b3;
 }
 
-/* RESULT BOX */
-.result {
-  margin-top: 20px;
-  text-align: left;
-  padding: 15px;
-  border-radius: 10px;
-  background: #f9f9f9;
+#meaningBox {
+  margin: 10px 0;
+  color: #333;
 }
 
-/* SAVE BUTTON */
-#saveBtn {
-  margin-top: 15px;
-  width: 100%;
-  background: #28a745;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-#saveBtn:hover {
-  background: #218838;
-}
-
-/* SAVED WORDS */
-#savedSection {
-  margin-top: 20px;
-  text-align: left;
-}
-
-#savedList li {
-  background: #e9f7ef;
-  margin: 5px 0;
+li {
+  background: #eee;
   padding: 8px;
-  border-radius: 5px;
+  margin: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* ERROR */
-.error {
-  color: red;
-  margin-top: 10px;
-}
-
-/* HIDDEN */
-.hidden {
-  display: none;
+li:hover {
+  background: #ddd;
 }
